@@ -13,3 +13,5 @@ https://components.streamlit.app/
 - https://github.com/Mohamed-512/Extra-Streamlit-Components
 - https://extras.streamlit.app/To-do%20items
 - https://github.com/victoryhb/streamlit-option-menu
+- https://streamlit-emoji-shortcodes-streamlit-app-gwckff.streamlit.app/
+- https://github.com/im-perativa/streamlit-calendar
