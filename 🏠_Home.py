@@ -1,4 +1,5 @@
 import streamlit as st
+from streamlit_card import card
 
 # Header template
 html_temp = """
@@ -29,8 +30,12 @@ def main():
     """
     st.markdown(html_temp, unsafe_allow_html=True)
 
-    #st.header("📘Azure Resource Naming Tool")
-    st.write('\n')
+    card(
+        title="",
+        text="",
+        image="https://resourseas.com/wp-content/uploads/2021/01/Job-Openings-we-are-hiring-1.jpg",
+        url="",
+    )
 
     tab1, tab2, tab3, tab4, tab5 = st.tabs([
     "🚀 Cloud Architect",
@@ -41,18 +46,10 @@ def main():
     ])
 
     with tab1:
-    st.markdown(
-        "With `st.experimental_connection` you can connect to a CockroachDB database and query it directly from Streamlit.")
-    st.code(
-        """
-        import streamlit as st
-        from cockroachdb_connection import CockroachDBConnection
-
-        conn = st.experimental_connection("cockroach", type=CockroachDBConnection)
-        df = conn.query("SELECT price FROM items")
-        st.dataframe(df)
-        """
-    )
+        st.subheader("Positions: 1")
+        st.write("Job Description")
+        st.write("Self Review checklist")
+        
 
 
 # main function call
