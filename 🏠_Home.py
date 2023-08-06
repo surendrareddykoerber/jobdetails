@@ -1,5 +1,10 @@
 import streamlit as st
 from streamlit_card import card
+from streamlit_star_rating import st_star_rating
+from streamlit_marquee import streamlit_marquee
+import pygwalker as pyg
+import pandas as pd
+from st_chat_message import message
 
 # Header template
 html_temp = """
@@ -49,6 +54,32 @@ def main():
         st.subheader("Positions: 1")
         st.write("Job Description")
         st.write("Self Review checklist")
+
+    df = pd.read_csv('./openings.csv')
+    pyg.walk(df, env='Streamlit')
+
+    
+
+    # message("Hello world!", is_user=True)
+    # message("Hi")
+
+    # st_star_rating(label = "Rate you experience", maxValue = 5, defaultValue = 3, key = "rating", emoticons = True )
+    # streamlit_marquee(**{
+    # # the marquee container background color
+    # 'background': "#ff0000",
+    # # the marquee text size
+    # 'fontSize': '12px',
+    # # the marquee text color
+    # "color": "#ffffff",
+    # # the marquee text content
+    # 'content': 'here is custom marquee component~',
+    # # the marquee container width
+    # 'width': '600px',
+    # # the marquee container line height
+    # 'lineHeight': "35px",
+    # # the marquee duration
+    # 'animationDuration': '5s',
+    # })
         
 
 
