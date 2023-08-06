@@ -32,6 +32,28 @@ def main():
     #st.header("📘Azure Resource Naming Tool")
     st.write('\n')
 
+    tab1, tab2, tab3, tab4, tab5 = st.tabs([
+    "🚀 Cloud Architect",
+    "🚀 Cloud Engineer",
+    "🚀 Cloud Tester",
+    "🚀 IAM Developer",
+    "🚀 Kafka Developer"
+    ])
+
+    with tab1:
+    st.markdown(
+        "With `st.experimental_connection` you can connect to a CockroachDB database and query it directly from Streamlit.")
+    st.code(
+        """
+        import streamlit as st
+        from cockroachdb_connection import CockroachDBConnection
+
+        conn = st.experimental_connection("cockroach", type=CockroachDBConnection)
+        df = conn.query("SELECT price FROM items")
+        st.dataframe(df)
+        """
+    )
+
 
 # main function call
 if __name__ == '__main__':
